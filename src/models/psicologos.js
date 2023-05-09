@@ -1,4 +1,4 @@
-const db = require('../database/db');
+const db = require('../database');
 const { DataTypes } = require('sequelize');
 
 
@@ -28,7 +28,7 @@ const Psicologos = db.define('Psicologos', {
 
 
 },
-{tableName:"dblavie"})
+)
 
 
 
