@@ -4,13 +4,16 @@ const psicologos = require('./src/models/psicologos'); // importanto psicologos
 
 const rotas = require('./src/rotas'); // importanto as rotas
 
-const db = require('./src/database/db'); // importando o banco de dados
+const db = require('../desafio 3/src/database/db'); // importando o banco de dados
 
 const app = express();
 
 const port = 5919;
+
 const bodyParser = require('body-parser');
+
 const router = express.Router();
+
 app.use(bodyParser.json());
 
 
