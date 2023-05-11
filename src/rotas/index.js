@@ -1,17 +1,15 @@
 const express = require('express');
-const psicologosControler = require('../controller/psicologoControllers');// Importanto psicologos
+const psicologosController = require('../controller/psicologosController');// Importanto psicologos
 
 const rotas = express.Router();
 
 
 // Rotas 
-rotas.post("/psicologos", psicologosControler.cadastrarPsicologo);//Cadastrar
-
-rotas.get("/psicologos", psicologosControler.listarPsicologos); // Listar
-rotas.get("/psicologo/:id", psicologosControler.showPsicologo); 
-rotas.put("/psicologo/:id", psicologosControler.atualizarPsicologo); //Atualizar
-
-rotas.delete("/psicologo/:id", psicologosControler.deletarPsicologo); //Deletar
+rotas.post("/cadastrar", psicologosController.cadastrarPsicologo);
+rotas.get("/psicologos", psicologosController.listarPsicologo); 
+rotas.get("/psicologo/:id", psicologosController.showPsicologo);
+rotas.put("/psicologo/:id", psicologosController.atualizarPsicologo); 
+rotas.delete("/psicologo/:id", psicologosController.deletarPsicologo);
 
 
 

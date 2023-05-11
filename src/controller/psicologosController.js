@@ -4,7 +4,7 @@ const Psicologos = require('../models/psicologos');
 const bcrypt = require("bcryptjs");
 
 // Cadastrar psicologos
-const psicologosControler = {
+const psicologosController   = {
     async cadastrarPsicologo(req, res) {
       try {
         const { nome, email, senha, apresentacao } = req.body;
@@ -119,4 +119,4 @@ const psicologosControler = {
         },
   };
   
-  module.exports = psicologosControler;
+  module.exports = psicologosController;
