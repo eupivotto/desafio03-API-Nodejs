@@ -1,9 +1,9 @@
 // Importando Psicologos 
-const Psicologos = require('../models/psicologos');
+const Psicologos = require('../models/Psicologos');
 // Função para armazenar senha
 const bcrypt = require("bcryptjs");
 
-// Cadastrar psicologos
+//Cadastrar psicologos
 const psicologosController   = {
     async cadastrarPsicologo(req, res) {
       try {
@@ -24,9 +24,12 @@ const psicologosController   = {
           email,
           senha: newSenha,
           apresentacao,
-        });
+          
+        }); 
         res.status(201).json(novoPsicologo);
+        
       } catch (error) {
+        console.error(error)
         res.status(400).json("Psicologo não cadastrado");
       }
     },
@@ -35,10 +38,9 @@ const psicologosController   = {
     async listarPsicologo(req, res) {
       try {
         const listaDePsicologo = await Psicologos.findAll();
-  
+
         res.status(200).json(listaDePsicologo);
       } catch (error) {
-        console.error(error);
         res.status(500).json("Erro no servidor");
       }
     },

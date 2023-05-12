@@ -11,7 +11,7 @@ rotas.get("/psicologo/:id", psicologosController.showPsicologo);
 rotas.put("/psicologo/:id", psicologosController.atualizarPsicologo); 
 rotas.delete("/psicologo/:id", psicologosController.deletarPsicologo);
 
-
+module.exports = rotas;
 
 
 
