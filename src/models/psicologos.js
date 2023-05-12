@@ -23,9 +23,9 @@ const Psicologos = db.define(
             type: DataTypes.STRING(150),
         }
     }, {
-        tableName: "psicologos",
+        tableName: "Psicologos",
         timestamps: false,
     }
 )
 
-module.exports = Psicologos
+module.exports = Psicologos;
