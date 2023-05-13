@@ -7,21 +7,24 @@ const pacientesController = {
      try { // Desestrutarando o objeto e obtendo o valor do id
         const {id} = req.params;
         if(!id){               // Buscar registro dos pacientes e 
-        const listaDePacientes = await Pacientes.findAll({where: {status: 1}});
+      //   const listaDePacientes = await Pacientes.findAll({where: {status: 1}});
 
         res.json(listaDePacientes);
         } else { // pacientes com status 1 armazenado na variavel listaDePacientes
             const listaDePacientes = await Pacientes.findAll({
                 where: {
                     id,
-                    status: 1,
+                  //status: 1,
                 }
             });
 
             res.json(listaDePacientes);
         }
-        }catch{
-            res.status(500).json(`ERRO: ${error}`);
+        }catch (error) {
+         res.status(500).json(`ERRO: ${error.message}`);
+
+
+         
         }
     },
 
@@ -60,7 +63,9 @@ const pacientesController = {
                return res.status(404).json("Id não encontrado");
             }
             //Deletando o paciente
-            await Pacientes.update({ status: 0 }, { where: { id } });
+            // await Pacientes.update({ status: 0 }, { where: { id } });
+            await Pacientes.destroy({ where: { id } });
+
    
             res.status(200).json("Deletado com Sucesso");
 
@@ -68,6 +73,20 @@ const pacientesController = {
             res.status(500).json(`ERRO: ${error}`);
          }
       },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     async atualizarPacientes (req, res) {
         try {

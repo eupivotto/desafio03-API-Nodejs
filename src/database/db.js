@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 // Informações de envio do banco de dados
-const DB_NAME = "lavie";
+const DB_NAME = "railway";
 const DB_USER = "root";
 const DB_PASS = "g8Zh0IikvTwvB1osUiq8";
 

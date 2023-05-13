@@ -20,6 +20,10 @@ const Pacientes = db.define(
             type: DataTypes.DATE, // Alteração do tipo de dado para DATE
             allowNull: false
         },
+        // status: {
+        //     type: DataTypes.INTEGER,
+        //     defaultValue: 1, // Valor padrão para indicar status ativo
+        //   },
         
     },
         {
