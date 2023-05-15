@@ -75,19 +75,6 @@ const pacientesController = {
       },
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     async atualizarPacientes (req, res) {
         try {
             const dados = req.body;
