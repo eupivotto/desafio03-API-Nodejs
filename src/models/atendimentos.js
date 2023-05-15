@@ -10,6 +10,26 @@ const Atendimentos = db.define("Atendimentos", {
         autoIncrement: true,
     },
 
+    paciente_id:{
+        type: DataTypes.INTEGER,
+        references:{
+            model:Pacientes,
+            key:"id", 
+
+        }
+
+    },
+
+    psicologo_id:{
+        type: DataTypes.INTEGER,
+        references:{
+            model:psicologos,
+            key:"id", 
+
+        }
+
+    },
+
     data_atendimento:{
         type: DataTypes.DATE,
         allowNull:false,

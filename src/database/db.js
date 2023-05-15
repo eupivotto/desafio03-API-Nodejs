@@ -3,13 +3,13 @@ const Sequelize = require('sequelize');
 // Informações de envio do banco de dados
 const DB_NAME = "railway";
 const DB_USER = "root";
-const DB_PASS = "g8Zh0IikvTwvB1osUiq8";
+const DB_PASS = "VaKK8eSp1IxfTW3MdjFC";
 
 // Configurações do banco
 const DB_CONFIG = {
   dialect: 'mysql',
-  host: 'containers-us-west-210.railway.app',
-  port: 6002
+  host: 'containers-us-west-137.railway.app',
+  port: 7979
 };
 
 // Objeto para guardar a conexão do banco de dados

@@ -23,7 +23,7 @@ const Psicologos = db.define(
             type: DataTypes.STRING(150),
         }
     }, {
-        tableName: "Psicologos",
+        tableName: "psicologos",
         timestamps: false,
     }
 )
