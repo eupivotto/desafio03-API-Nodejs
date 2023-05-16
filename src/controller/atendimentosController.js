@@ -1,4 +1,4 @@
-const { Atendimentos, Psicologos, Pacientes } = require('../models')
+const { Atendimentos, Psicologos, Pacientes } = require('../models/index')
 
 const atendimentosController = {
     listarAtendimentos: async (req, res) => {
