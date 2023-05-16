@@ -68,7 +68,7 @@ const atendimentosController = {
           },
         });
   
-        res.status(204).json();
+        res.status(204).json("Aendimento cancelado ");
       } catch (error) {
         res.status(500).json(error);
       }

@@ -1,4 +1,5 @@
 const Psicologos = require('../models/Psicologos');
+
 const bcrypt = require("bcryptjs");
 
 const psicologosController = {

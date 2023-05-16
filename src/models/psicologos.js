@@ -14,7 +14,7 @@ const Psicologos = db.define(
             type: DataTypes.STRING(45),
         },
         email: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(125),
         },
         senha: {
             type: DataTypes.STRING(200),

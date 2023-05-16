@@ -7,7 +7,7 @@ const pacientesController = {
      try { // Desestrutarando o objeto e obtendo o valor do id
         const {id} = req.params;
         if(!id){               // Buscar registro dos pacientes e 
-      //   const listaDePacientes = await Pacientes.findAll({where: {status: 1}});
+        const listaDePacientes = await Pacientes.findAll({where: {status: 1}});
 
         res.json(listaDePacientes);
         } else { // pacientes com status 1 armazenado na variavel listaDePacientes

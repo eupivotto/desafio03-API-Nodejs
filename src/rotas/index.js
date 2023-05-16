@@ -12,7 +12,7 @@ rotas.post("/cadastrar", psicologosController.cadastrarPsicologo);
 rotas.get("/psicologos", psicologosController.listarPsicologo); 
 rotas.get("/psicologo/:id", psicologosController.showPsicologo);
 rotas.put("/psicologo/:id", psicologosController.atualizarPsicologo); 
-rotas.delete("/psicologo/:id", psicologosController.deletarPsicologo);
+rotas.delete("/deletar/:id", psicologosController.deletarPsicologo);
 
 //Rotas Pacientes 
 rotas.get("/pacientes", pacientesController.listarPacientes);
@@ -24,7 +24,7 @@ rotas.put("/pacientes/:id",pacientesController.atualizarPacientes);
 //Rotas Atendimentos
 rotas.get("/atendimentos", atendimentosController.listarAtendimentos);
 rotas.post("/atendimentos", atendimentosController.criarAtendimento);
-rotas.delete("/atendimentos/:id",atendimentosController.cancelarAtendimento);
+rotas.delete("/cancelar/:id",atendimentosController.cancelarAtendimento);
 
 module.exports = rotas;
 
